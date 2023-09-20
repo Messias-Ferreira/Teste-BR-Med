@@ -1,0 +1,32 @@
+version: "3"
+services:
+  web:
+    build: .
+    env_file:
+      - .env
+    command: >
+     bash -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - ${PORT_DJANGO}:8000
+    volumes:
+      - .:/app
+    restart: on-failure
+    depends_on:
+      postgres_local:
+        condition: service_healthy
+
+  postgres_local:
+    image: postgres
+    ports:
+      - ${PORT_DB}:5432 
+    environment:
+      POSTGRES_USER: ${USER_DB}
+      POSTGRES_PASSWORD: ${PASSWORD_DB}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+

@@ -1,0 +1,9 @@
+#Python
+__pycache__
+
+#Django
+*.sqlite3
+
+#Projeto
+.env
+Pipfile

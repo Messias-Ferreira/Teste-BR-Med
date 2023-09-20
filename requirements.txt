@@ -1,0 +1,4 @@
+django==4.2.5
+psycopg==3.1.10
+ipython==8.15.0
+requests==2.31.0
