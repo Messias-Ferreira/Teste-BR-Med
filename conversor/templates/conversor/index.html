@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'conversor/highcharts.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Teste - BR Med</title>
+</head>
+<header class="mb-5" , style="background-color: blueviolet;">
+    <div class="container">
+        <h1 class="text-center" style="color: white;">Bem Vindo ao sistema de contação</h1>
+    </div>
+</header>
+
+<body style="background-color: rgba(0, 0, 0, 0.075);">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="container text-center mt-4">
+                        <div class="row align-items-start">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="dataInicio" class="form-label">DT. Inicio</label>
+                                    <input type="date" class="form-control" id="dataInicio"
+                                        aria-describedby="dataAjuda">
+                                    <div id="dataAjuda" class="form-text">Data Inicio da contação</div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="dataFim" class="form-label">DT. Fim</label>
+                                    <input type="date" class="form-control" id="dataFim" , aria-describedby="dataAjuda">
+                                    <div id="dataAjuda" class="form-text">Data fim da contação</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-4 mx-auto mt-5 mb-3">
+                        <button id="submit" type="button" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="container mt-3">
+        <div class="card">
+            <div class="card-body">
+                <figure class="highcharts-figure">
+                    <div id="container"></div>
+                    <p class="highcharts-description">
+                        Chart showing data loaded dynamically. The individual data points can
+                        be clicked to display more information.
+                    </p>
+                </figure>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="{% static 'conversor/index.js' %}"></script>
+    <script src="{% static 'conversor/higtcharts.js' %}"></script>
+
+</body>
+
+</html>

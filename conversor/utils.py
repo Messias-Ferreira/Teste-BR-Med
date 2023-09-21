@@ -5,6 +5,7 @@ Modulo de funççoes uteis para a aplicação
 
 
 from conversor.models import Cotacao
+from datetime import datetime, date
 
 def converter_dados_de_contacao(reposta_contacao: dict) -> list:
     """Converte os dados da api para objeto contacao
@@ -31,3 +32,6 @@ def converter_dados_de_contacao(reposta_contacao: dict) -> list:
     ]
 
             
+def converter_data(data: date) -> date:
+
+    return datetime.strptime(data, "%Y-%m-%d").date()
