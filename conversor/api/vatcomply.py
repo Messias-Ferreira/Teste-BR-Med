@@ -19,17 +19,17 @@ class VatComply:
     @classmethod
     def get_contacao_por_data(cls, data: datetime) -> dict:
         """
-        Retorna as contação do dola co
+        Retorna as contação do dola em relação a outras moedas
 
         Args:
-            data (datetime): _description_
+            data (datetime): data da contação
 
         Raises:
-            Exception: _description_
+            Exception: Quando ocorre algum erro 
 
         Returns:
-            dict: _description_
-        """        
+            dict: resposta da api
+        """
 
         resposta = requests.get(
             cls.__URL_HOST + f"/rates?base=USD&date={data.strftime('%Y-%m-%d')}",
@@ -38,5 +38,5 @@ class VatComply:
 
         if not resposta.ok:
             raise Exception("Erro ao consultar API da VatComply")
-        
+
         return resposta.json()
