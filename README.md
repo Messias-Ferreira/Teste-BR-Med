@@ -28,7 +28,7 @@ Para rodar o projeto localmente usando Docker Compose, siga os passos abaixo:
 4. O sistema estará disponível em http://localhost:8000 no seu navegador.
 
 
-## 2. Populando a Base de Dados
+## 2. Populando a Base de Dados 
 
 Para popular a base de dados com itens de teste, siga os passos abaixo:
 
