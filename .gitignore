@@ -7,3 +7,4 @@ __pycache__
 #Projeto
 .env
 Pipfile*
+.vscode
