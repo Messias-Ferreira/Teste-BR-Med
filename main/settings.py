@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+
 import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -127,7 +128,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+if not DEBUG:
+    STATIC_ROOT = BASE_DIR / "staticfiles"
+
 STATIC_URL = "static/"
 
 # Default primary key field type
@@ -136,4 +139,5 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 URL_HOST = os.getenv("URL_HOST")
-django_heroku.settings(locals())
+if not DEBUG:
+    django_heroku.settings(locals())
