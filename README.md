@@ -1,6 +1,6 @@
 # Sistema de Contação - Teste para BR-Med :rocket:
 
-Este é um sistema de contação desenvolvido como parte de um teste para a BR-Med, utilizando Python 3.10. O sistema permite a contação de itens e inclui funcionalidades para rodar o projeto localmente, popular a base de dados e executar testes locais.
+Este é um sistema de contação desenvolvido como parte de um teste para a BR-Med.
 
 ## Pré-requisitos
 
