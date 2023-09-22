@@ -15,3 +15,7 @@ popular_base:
 
 testes:
 	docker compose exec web python manage.py test conversor
+
+deploy:
+	python manage.py migrate
+	python manage.py popular_base 30 

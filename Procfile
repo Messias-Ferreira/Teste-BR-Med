@@ -1,3 +1,2 @@
-release: python manage.py migrate
-release: python manage.py popular_base 30 
+release: make deploy
 web: gunicorn main.wsgi
