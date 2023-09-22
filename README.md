@@ -15,15 +15,17 @@ Para rodar o projeto localmente usando Docker Compose, siga os passos abaixo:
 
 1. Clone o repositório do projeto para o seu ambiente de desenvolvimento.
 
+2. ADD na raiz do projeto o .env com os paramentros informado no email
+
 ~~~shell
    git clone https://github.com/Messias-Ferreira/Teste-BR-Med.git
    cd Teste-BR-Med
 ~~~
-2. Execute o seguinte comando para rodar o projeto localmente com Docker Compose:
+3. Execute o seguinte comando para rodar o projeto localmente com Docker Compose:
 ~~~shell
     make local
 ~~~
-3. O sistema estará disponível em http://localhost:8000 no seu navegador.
+4. O sistema estará disponível em http://localhost:8000 no seu navegador.
 
 
 ## 2. Populando a Base de Dados
